@@ -1,0 +1,36 @@
+.gradient-blue-bg {
+    background: linear-gradient(89deg, #003f69 9.83%, #530454 96.36%);
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-overlay.active {
+    display: block;
+}
+
+.popup.gradient-tab-bg {
+    overflow-y: auto;
+
+    animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
